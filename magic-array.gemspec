@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Eugene Surzhko']
   spec.email         = ['SurzhkoYevhen@gmail.com']
   spec.description   = 'Provides easy way for grouping constants into arrays'
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = 'Provides easy way for grouping constants into arrays'
   spec.homepage      = ''
   spec.license       = 'MIT'
 
