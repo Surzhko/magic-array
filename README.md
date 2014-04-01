@@ -1,6 +1,6 @@
 # Magic::Array
 
-TODO: Write a gem description
+Provides easy way for grouping constants into arrays
 
 ## Installation
 
@@ -18,7 +18,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### from_existing(pattern)
+
+```ruby
+class Foo
+  BAR_1 = 1
+  BAR_2 = 2
+  #...
+  BAR_N = Float::INFINITY
+
+  BARS = [
+    BAR_1,
+    BAR_2,
+    #...,
+    BAR_N
+  ]
+end
+```
+become
+
+```ruby
+class Foo
+  BAR_1 = 1
+  BAR_2 = 2
+  #...
+  BAR_N = Float::INFINITY
+
+  BARS = from_existing /^BAR/ #[1, 2, ..., Infinity]
+end
+```
+so after adding new constant (e.g. `BAR_N+1`) you will not need to modify arrays constant.
 
 ## Contributing
 
